@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "/pending", to: "organizations#pending", as: :pending_organizations
 
   resources :organizations
+  resources :imports, only: [:create, :new, :show]
 end
